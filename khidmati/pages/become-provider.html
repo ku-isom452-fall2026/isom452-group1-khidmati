@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apply to become a service provider on Khidmati and reach more customers in Kuwait.">
+  <title>Become a Provider | Khidmati</title>
+  <link rel="icon" type="image/png" href="../images/logo.png">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="../index.html" class="brand">
+        <img src="../images/logo.png" alt="Khidmati خدمتي">
+        
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu"><span></span></label>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="providers.html">Providers</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html" class="btn btn-outline">Login</a></li>
+          <li><a href="register.html" class="btn btn-primary">Sign Up</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="breadcrumb"><a href="../index.html">Home</a> / Become a Provider</p>
+        <h1>Become a Provider</h1>
+        <p>Join Khidmati, receive booking requests and grow your business. Our team reviews every application.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <form class="form-card form-wide" action="confirmation.html" method="post" enctype="multipart/form-data">
+
+          <fieldset>
+            <legend>Personal / company information</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="p-name">Full name or company name</label>
+                <input type="text" id="p-name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="p-civil">Civil ID number</label>
+                <input type="text" id="p-civil" name="civil-id" inputmode="numeric" maxlength="12" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="p-email">Email address</label>
+                <input type="email" id="p-email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="p-phone">Mobile number</label>
+                <input type="tel" id="p-phone" name="phone" placeholder="+965 5XXX XXXX" required>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Services you offer</legend>
+            <div class="choice-group">
+              <label class="choice"><input type="checkbox" name="services" value="ac"> AC Repair</label>
+              <label class="choice"><input type="checkbox" name="services" value="cleaning"> Cleaning</label>
+              <label class="choice"><input type="checkbox" name="services" value="plumbing"> Plumbing</label>
+              <label class="choice"><input type="checkbox" name="services" value="electrical"> Electrical</label>
+              <label class="choice"><input type="checkbox" name="services" value="moving"> Moving</label>
+              <label class="choice"><input type="checkbox" name="services" value="painting"> Painting</label>
+              <label class="choice"><input type="checkbox" name="services" value="pest"> Pest Control</label>
+              <label class="choice"><input type="checkbox" name="services" value="handyman"> Handyman</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Coverage and experience</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="p-area">Main area</label>
+                <select id="p-area" name="area" required>
+                  <option value="">Select an area</option>
+                  <option>Kuwait City</option>
+                  <option>Hawalli</option>
+                  <option>Salmiya</option>
+                  <option>Farwaniya</option>
+                  <option>Jahra</option>
+                  <option>Ahmadi</option>
+                  <option>Mubarak Al-Kabeer</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="p-exp">Years of experience</label>
+                <input type="number" id="p-exp" name="experience" min="0" max="50" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="p-bio">About you and your work</label>
+              <textarea id="p-bio" name="bio" placeholder="Tell customers about your experience and the work you do."></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Documents</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="p-id-file">Civil ID (front and back)</label>
+                <input type="file" id="p-id-file" name="civil-id-file" accept=".jpg,.jpeg,.png,.pdf" required>
+              </div>
+              <div class="form-group">
+                <label for="p-license">Trade license or certificate</label>
+                <input type="file" id="p-license" name="license-file" accept=".jpg,.jpeg,.png,.pdf">
+                <p class="form-hint">Optional for individual technicians.</p>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="form-group">
+            <label class="choice"><input type="checkbox" name="terms" required> I confirm that the information is correct and I agree to the Provider Terms</label>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Submit Application</button>
+            <button type="reset" class="btn btn-outline">Clear Form</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Khidmati خدمتي</h3>
+        <p>A home services booking platform for Kuwait. Verified providers, clear prices and easy booking.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="providers.html">Providers</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact &amp; Help</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Account</h3>
+        <ul>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Sign Up</a></li>
+          <li><a href="become-provider.html">Become a Provider</a></li>
+          <li><a href="booking.html">Book a Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Dashboards</h3>
+        <ul>
+          <li><a href="customer-dashboard.html">Customer</a></li>
+          <li><a href="provider-dashboard.html">Provider</a></li>
+          <li><a href="admin-dashboard.html">Admin</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">&copy; 2026 Khidmati. Course project, HTML &amp; CSS stage.</div>
+    </div>
+  </footer>
+
+</body>
+</html>

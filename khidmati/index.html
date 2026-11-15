@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Khidmati helps residents of Kuwait find and book trusted home service providers: AC repair, cleaning, plumbing, electrical work and more.">
+  <title>Khidmati | Home Services in Kuwait</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="Khidmati خدمتي">
+        
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu"><span></span></label>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="pages/services.html">Services</a></li>
+          <li><a href="pages/providers.html">Providers</a></li>
+          <li><a href="pages/about.html">About</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+          <li><a href="pages/login.html" class="btn btn-outline">Login</a></li>
+          <li><a href="pages/register.html" class="btn btn-primary">Sign Up</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+     
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Trusted home services, booked in minutes</h1>
+          <p>Find verified AC technicians, cleaners, plumbers and electricians near you in Kuwait. Compare prices in KWD, read real reviews and book online.</p>
+
+          <form class="hero-search" action="pages/providers.html" method="get">
+            <label for="hero-service" class="visually-hidden">Service</label>
+            <select id="hero-service" name="service">
+           <option value="" selected disabled>Choose a service</option>
+              <option>AC Repair &amp; Maintenance</option>
+              <option>Home Cleaning</option>
+              <option>Plumbing</option>
+              <option>Electrical</option>
+              <option>Moving</option>
+              <option>Painting</option>
+            </select>
+            <label for="hero-area" class="visually-hidden">Area</label>
+            <select id="hero-area" name="area">
+           <option value="" selected disabled>Choose an area</option>
+              <option>Kuwait City</option>
+              <option>Hawalli</option>
+              <option>Salmiya</option>
+              <option>Farwaniya</option>
+              <option>Jahra</option>
+              <option>Ahmadi</option>
+              <option>Mubarak Al-Kabeer</option>
+            </select>
+            <button type="submit" class="btn btn-accent">Find Providers</button>
+          </form>
+        </div>
+        <div class="hero-image">
+          <img src="images/repair.jpg" alt="Professional cleaners vacuuming a living room">
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular services -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Popular Services</h2>
+          <p>From urgent AC repairs in the summer heat to a deep clean before guests arrive.</p>
+        </div>
+        <div class="card-grid">
+          <a href="pages/providers.html" class="card service-card">
+            <div class="service-icon service-icon-ac" aria-hidden="true"><i class="bi bi-fan"></i></div>
+            <h3>AC Repair</h3>
+            <p>Repair, gas refill and servicing</p>
+          </a>
+          <a href="pages/providers.html" class="card service-card">
+            <div class="service-icon service-icon-cleaning" aria-hidden="true"><i class="bi bi-bucket"></i></div>
+            <h3>Cleaning</h3>
+            <p>Home, villa and deep cleaning</p>
+          </a>
+          <a href="pages/providers.html" class="card service-card">
+            <div class="service-icon service-icon-plumbing" aria-hidden="true"><i class="bi bi-wrench"></i></div>
+            <h3>Plumbing</h3>
+            <p>Leaks, pipes and water heaters</p>
+          </a>
+          <a href="pages/providers.html" class="card service-card">
+            <div class="service-icon service-icon-electrical" aria-hidden="true"><i class="bi bi-lightning"></i></div>
+            <h3>Electrical</h3>
+            <p>Wiring, lighting and repairs</p>
+          </a>
+          <a href="pages/providers.html" class="card service-card">
+            <div class="service-icon service-icon-moving" aria-hidden="true"><i class="bi bi-truck"></i></div>
+            <h3>Moving</h3>
+            <p>Packing, loading and transport</p>
+          </a>
+          <a href="pages/providers.html" class="card service-card">
+            <div class="service-icon service-icon-painting" aria-hidden="true"><i class="bi bi-brush"></i></div>
+            <h3>Painting</h3>
+            <p>Interior and exterior painting</p>
+          </a>
+        </div>
+        <p class="text-center" style="margin-top: 2rem;">
+          <a href="pages/services.html" class="btn btn-outline">View All Services</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-title">
+          <h2>How It Works</h2>
+          <p>Booking a technician should be as easy as ordering food.</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <h3>Choose a service</h3>
+            <p>Pick what you need and your area in Kuwait.</p>
+          </div>
+          <div class="step">
+            <h3>Compare providers</h3>
+            <p>See prices, ratings and reviews from real customers.</p>
+          </div>
+          <div class="step">
+            <h3>Book a time</h3>
+            <p>Select a date, time slot and address that suit you.</p>
+          </div>
+          <div class="step">
+            <h3>Pay and review</h3>
+            <p>Pay by K-Net or cash, then rate the service.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top providers -->
+    <section class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Top-Rated Providers</h2>
+          <p>Verified professionals with the best customer reviews this month.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card provider-card">
+            <div class="provider-head">
+              <div class="avatar">AM</div>
+              <div>
+                <h3>Abdullah Al-Mutairi</h3>
+                <span class="rating">★ 4.9 <span class="muted">(212 reviews)</span></span>
+              </div>
+            </div>
+            <ul class="provider-meta">
+              <li class="tag">AC Repair</li>
+              <li class="tag">Hawalli</li>
+            </ul>
+            <p class="price">From 8 KWD</p>
+            <a href="pages/provider-profile.html" class="btn btn-primary">View Profile</a>
+          </article>
+          <article class="card provider-card">
+            <div class="provider-head">
+              <div class="avatar">FH</div>
+              <div>
+                <h3>Fresh Home Cleaning</h3>
+                <span class="rating">★ 4.8 <span class="muted">(164 reviews)</span></span>
+              </div>
+            </div>
+            <ul class="provider-meta">
+              <li class="tag">Cleaning</li>
+              <li class="tag">Salmiya</li>
+            </ul>
+            <p class="price">From 12 KWD</p>
+            <a href="pages/provider-profile.html" class="btn btn-primary">View Profile</a>
+          </article>
+          <article class="card provider-card">
+            <div class="provider-head">
+              <div class="avatar">RS</div>
+              <div>
+                <h3>Rashid Plumbing</h3>
+                <span class="rating">★ 4.7 <span class="muted">(98 reviews)</span></span>
+              </div>
+            </div>
+            <ul class="provider-meta">
+              <li class="tag">Plumbing</li>
+              <li class="tag">Farwaniya</li>
+            </ul>
+            <p class="price">From 6 KWD</p>
+            <a href="pages/provider-profile.html" class="btn btn-primary">View Profile</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="cta-band">
+      <div class="container">
+        <h2>Are you a service professional?</h2>
+        <p>Join Khidmati to reach more customers across Kuwait and manage your jobs in one place.</p>
+        <a href="pages/become-provider.html" class="btn btn-primary">Become a Provider</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Khidmati خدمتي</h3>
+        <p>A home services booking platform for Kuwait. Verified providers, clear prices and easy booking.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="pages/services.html">Services</a></li>
+          <li><a href="pages/providers.html">Providers</a></li>
+          <li><a href="pages/about.html">About Us</a></li>
+          <li><a href="pages/contact.html">Contact &amp; Help</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Account</h3>
+        <ul>
+          <li><a href="pages/login.html">Login</a></li>
+          <li><a href="pages/register.html">Sign Up</a></li>
+          <li><a href="pages/become-provider.html">Become a Provider</a></li>
+          <li><a href="pages/booking.html">Book a Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Dashboards</h3>
+        <ul>
+          <li><a href="pages/customer-dashboard.html">Customer</a></li>
+          <li><a href="pages/provider-dashboard.html">Provider</a></li>
+          <li><a href="pages/admin-dashboard.html">Admin</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">&copy; 2026 Khidmati. Course project, HTML &amp; CSS stage.</div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Log in to your Khidmati account.">
+  <title>Login | Khidmati</title>
+  <link rel="icon" type="image/png" href="../images/logo.png">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="../index.html" class="brand">
+        <img src="../images/logo.png" alt="Khidmati خدمتي">
+        
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu"><span></span></label>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="providers.html">Providers</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html" class="btn btn-outline">Login</a></li>
+          <li><a href="register.html" class="btn btn-primary">Sign Up</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section-alt">
+      <div class="container">
+        <form class="form-card form-narrow" action="customer-dashboard.html" method="post">
+          <h1 class="text-center">Welcome back</h1>
+          <p class="text-center muted">Log in to manage your bookings.</p>
+
+          <div class="form-group">
+            <label for="login-role">I am a</label>
+            <select id="login-role" name="role">
+              <option value="customer">Customer</option>
+              <option value="provider">Service provider</option>
+              <option value="admin">Administrator</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="login-email">Email address</label>
+            <input type="email" id="login-email" name="email" placeholder="you@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" name="password" required>
+          </div>
+
+          <div class="form-group">
+            <label class="choice"><input type="checkbox" name="remember"> Remember me</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Log In</button>
+
+          <p class="form-footer"><a href="contact.html">Forgot your password?</a></p>
+          <p class="form-footer">New to Khidmati? <a href="register.html">Create an account</a></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Khidmati خدمتي</h3>
+        <p>A home services booking platform for Kuwait. Verified providers, clear prices and easy booking.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="providers.html">Providers</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact &amp; Help</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Account</h3>
+        <ul>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Sign Up</a></li>
+          <li><a href="become-provider.html">Become a Provider</a></li>
+          <li><a href="booking.html">Book a Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Dashboards</h3>
+        <ul>
+          <li><a href="customer-dashboard.html">Customer</a></li>
+          <li><a href="provider-dashboard.html">Provider</a></li>
+          <li><a href="admin-dashboard.html">Admin</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">&copy; 2026 Khidmati. Course project, HTML &amp; CSS stage.</div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compare verified home service providers in Kuwait by area, price and rating.">
+  <title>Providers | Khidmati</title>
+  <link rel="icon" type="image/png" href="../images/logo.png">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="providers-page">
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="../index.html" class="brand">
+        <img src="../images/logo.png" alt="Khidmati خدمتي">
+        
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu"><span></span></label>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="providers.html" class="active">Providers</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html" class="btn btn-outline">Login</a></li>
+          <li><a href="register.html" class="btn btn-primary">Sign Up</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="breadcrumb"><a href="../index.html">Home</a> / Providers</p>
+        <h1>Find a Provider</h1>
+        <p>Filter by service, area, price and rating to find the right professional.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <form class="filters" action="providers.html" method="get">
+          <div class="form-group">
+            <label for="f-service">Service</label>
+            <select id="f-service" name="service">
+              <option value="">All services</option>
+              <option>AC Repair &amp; Maintenance</option>
+              <option>Home Cleaning</option>
+              <option>Plumbing</option>
+              <option>Electrical</option>
+              <option>Moving &amp; Packing</option>
+              <option>Painting</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="f-area">Area</label>
+            <select id="f-area" name="area">
+              <option value="">All areas</option>
+              <option>Kuwait City</option>
+              <option>Hawalli</option>
+              <option>Salmiya</option>
+              <option>Farwaniya</option>
+              <option>Jahra</option>
+              <option>Ahmadi</option>
+              <option>Mubarak Al-Kabeer</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="f-price">Max price (KWD)</label>
+            <input type="number" id="f-price" name="price" min="1" placeholder="e.g. 20">
+          </div>
+          <div class="form-group">
+            <label for="f-rating">Minimum rating</label>
+            <select id="f-rating" name="rating">
+              <option value="">Any</option>
+              <option value="4.5">4.5 and above</option>
+              <option value="4">4.0 and above</option>
+              <option value="3">3.0 and above</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Apply Filters</button>
+        </form>
+
+        <p class="muted">Showing 6 providers</p>
+
+        <div class="card-grid">
+
+          <article class="card provider-card">
+            <div class="provider-head">
+              <div class="avatar">AM</div>
+              <div>
+                <h3>Abdullah Al-Mutairi</h3>
+                <span class="rating">★ 4.9 <span class="muted">(212 reviews)</span></span>
+              </div>
+            </div>
+            <ul class="provider-meta">
+              <li class="tag">AC Repair</li>
+              <li class="tag">Hawalli</li>
+              <li class="tag">Verified</li>
+            </ul>
+            <p>12 years of experience with split and central AC units.</p>
+            <p class="price">From 8 KWD</p>
+            <a href="provider-profile.html" class="btn btn-primary">View Profile</a>
+          </article>
+
+          <article class="card provider-card">
+            <div class="provider-head">
+              <div class="avatar">FH</div>
+              <div>
+                <h3>Fresh Home Cleaning</h3>
+                <span class="rating">★ 4.8 <span class="muted">(164 reviews)</span></span>
+              </div>
+            </div>
+            <ul class="provider-meta">
+              <li class="tag">Cleaning</li>
+              <li class="tag">Salmiya</li>
+              <li class="tag">Verified</li>
+            </ul>
+            <p>Team of 6 cleaners for apartments, villas and deep cleaning.</p>
+            <p class="price">From 12 KWD</p>
+            <a href="provider-profile.html" class="btn btn-primary">View Profile</a>
+          </article>
+
+          <article class="card provider-card">
+            <div class="provider-head">
+              <div class="avatar">RS</div>
+              <div>
+                <h3>Rashid Plumbing</h3>
+                <span class="rating">★ 4.7 <span class="muted">(98 reviews)</span></span>
+              </div>
+            </div>
+            <ul class="provider-meta">
+              <li class="tag">Plumbing</li>
+              <li class="tag">Farwaniya</li>
+              <li class="tag">Verified</li>
+            </ul>
+            <p>Fast response for leaks, blocked drains and water heaters.</p>
+            <p class="price">From 6 KWD</p>
+            <a href="provider-profile.html" class="btn btn-primary">View Profile</a>
+          </article>
+
+          <article class="card provider-card">
+            <div class="provider-head">
+              <div class="avatar">BE</div>
+              <div>
+                <h3>Bright Electric</h3>
+                <span class="rating">★ 4.6 <span class="muted">(75 reviews)</span></span>
+              </div>
+            </div>
+            <ul class="provider-meta">
+              <li class="tag">Electrical</li>
+              <li class="tag">Jahra</li>
+              <li class="tag">Verified</li>
+            </ul>
+            <p>Licensed electricians for wiring, lighting and inspections.</p>
+            <p class="price">From 6 KWD</p>
+            <a href="provider-profile.html" class="btn btn-primary">View Profile</a>
+          </article>
+
+          <article class="card provider-card">
+            <div class="provider-head">
+              <div class="avatar">SM</div>
+              <div>
+                <h3>Safe Move Kuwait</h3>
+                <span class="rating">★ 4.5 <span class="muted">(61 reviews)</span></span>
+              </div>
+            </div>
+            <ul class="provider-meta">
+              <li class="tag">Moving</li>
+              <li class="tag">Ahmadi</li>
+              <li class="tag">Verified</li>
+            </ul>
+            <p>Packing, loading and transport with trained crews and trucks.</p>
+            <p class="price">From 25 KWD</p>
+            <a href="provider-profile.html" class="btn btn-primary">View Profile</a>
+          </article>
+
+          <article class="card provider-card">
+            <div class="provider-head">
+              <div class="avatar">CP</div>
+              <div>
+                <h3>Color Pro Painters</h3>
+                <span class="rating">★ 4.4 <span class="muted">(47 reviews)</span></span>
+              </div>
+            </div>
+            <ul class="provider-meta">
+              <li class="tag">Painting</li>
+              <li class="tag">Kuwait City</li>
+              <li class="tag">Verified</li>
+            </ul>
+            <p>Interior and exterior painting with neat, on-time finishing.</p>
+            <p class="price">From 30 KWD</p>
+            <a href="provider-profile.html" class="btn btn-primary">View Profile</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Khidmati خدمتي</h3>
+        <p>A home services booking platform for Kuwait. Verified providers, clear prices and easy booking.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="providers.html">Providers</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact &amp; Help</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Account</h3>
+        <ul>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Sign Up</a></li>
+          <li><a href="become-provider.html">Become a Provider</a></li>
+          <li><a href="booking.html">Book a Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Dashboards</h3>
+        <ul>
+          <li><a href="customer-dashboard.html">Customer</a></li>
+          <li><a href="provider-dashboard.html">Provider</a></li>
+          <li><a href="admin-dashboard.html">Admin</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">&copy; 2026 Khidmati. Course project, HTML &amp; CSS stage.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
