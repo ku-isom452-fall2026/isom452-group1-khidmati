@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Admin dashboard: verify providers, review bookings and handle complaints.">
+  <title>Admin Dashboard | Khidmati</title>
+  <link rel="icon" type="image/png" href="../images/logo.png">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="../index.html" class="brand">
+        <img src="../images/logo.png" alt="Khidmati خدمتي">
+        
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu"><span></span></label>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="providers.html">Providers</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html" class="btn btn-outline">Login</a></li>
+          <li><a href="register.html" class="btn btn-primary">Sign Up</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container dashboard">
+
+    <aside class="sidebar" aria-label="Dashboard menu">
+      <h2>Admin</h2>
+      <ul>
+        <li><a href="#overview" class="active">Overview</a></li>
+        <li><a href="#verification">Provider Verification</a></li>
+        <li><a href="#bookings">Recent Bookings</a></li>
+        <li><a href="#complaints">Complaints</a></li>
+        <li><a href="#categories">Service Categories</a></li>
+        <li><a href="login.html">Log Out</a></li>
+      </ul>
+    </aside>
+
+    <div class="dash-main">
+
+      <section id="overview">
+        <h1>Admin Overview</h1>
+        <p class="muted">Platform activity at a glance.</p>
+        <div class="stats">
+          <div class="stat"><strong>1,248</strong><span>Registered customers</span></div>
+          <div class="stat"><strong>86</strong><span>Verified providers</span></div>
+          <div class="stat"><strong>412</strong><span>Bookings this month</span></div>
+          <div class="stat"><strong>5</strong><span>Open complaints</span></div>
+        </div>
+      </section>
+
+      <section id="verification">
+        <h2>Providers Waiting for Verification</h2>
+        <div class="table-wrap">
+          <table class="data">
+            <thead>
+              <tr><th>Name</th><th>Service</th><th>Area</th><th>Experience</th><th>Documents</th><th>Action</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Hassan Electric Works</td><td>Electrical</td><td>Jahra</td><td>8 years</td>
+                <td><span class="badge badge-success">Complete</span></td>
+                <td><div class="form-actions"><a href="#verification" class="btn btn-primary btn-sm">Approve</a><a href="#verification" class="btn btn-danger btn-sm">Reject</a></div></td>
+              </tr>
+              <tr>
+                <td>Najm Al-Khaleej Cleaning</td><td>Cleaning</td><td>Farwaniya</td><td>5 years</td>
+                <td><span class="badge badge-warning">License missing</span></td>
+                <td><div class="form-actions"><a href="#verification" class="btn btn-primary btn-sm">Approve</a><a href="#verification" class="btn btn-danger btn-sm">Reject</a></div></td>
+              </tr>
+              <tr>
+                <td>Omar Al-Ajmi</td><td>Handyman</td><td>Ahmadi</td><td>3 years</td>
+                <td><span class="badge badge-success">Complete</span></td>
+                <td><div class="form-actions"><a href="#verification" class="btn btn-primary btn-sm">Approve</a><a href="#verification" class="btn btn-danger btn-sm">Reject</a></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="bookings">
+        <h2>Recent Bookings</h2>
+        <div class="table-wrap">
+          <table class="data">
+            <thead>
+              <tr><th>Booking</th><th>Customer</th><th>Provider</th><th>Service</th><th>Amount</th><th>Status</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>KH-00425</td><td>Mariam F.</td><td>Abdullah Al-Mutairi</td><td>AC cleaning</td><td>30 KWD</td><td><span class="badge badge-warning">Requested</span></td></tr>
+              <tr><td>KH-00421</td><td>Yousef N.</td><td>Abdullah Al-Mutairi</td><td>Gas refill</td><td>18 KWD</td><td><span class="badge badge-danger">Emergency</span></td></tr>
+              <tr><td>KH-00418</td><td>Sara A.</td><td>Abdullah Al-Mutairi</td><td>AC inspection</td><td>8 KWD</td><td><span class="badge badge-warning">Requested</span></td></tr>
+              <tr><td>KH-00402</td><td>Sara A.</td><td>Fresh Home Cleaning</td><td>Home cleaning</td><td>45 KWD</td><td><span class="badge badge-success">Accepted</span></td></tr>
+              <tr><td>KH-00377</td><td>Sara A.</td><td>Rashid Plumbing</td><td>Plumbing</td><td>12 KWD</td><td><span class="badge badge-success">Completed</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="complaints">
+        <h2>Open Complaints</h2>
+        <div class="table-wrap">
+          <table class="data">
+            <thead>
+              <tr><th>Ticket</th><th>Booking</th><th>Issue</th><th>Opened</th><th>Status</th><th>Action</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>T-112</td><td>KH-00390</td><td>Technician arrived 2 hours late</td><td>10 Nov</td><td><span class="badge badge-warning">In review</span></td><td><a href="#complaints" class="btn btn-outline btn-sm">Open</a></td></tr>
+              <tr><td>T-109</td><td>KH-00366</td><td>Price differed from the quote</td><td>8 Nov</td><td><span class="badge badge-danger">Urgent</span></td><td><a href="#complaints" class="btn btn-outline btn-sm">Open</a></td></tr>
+              <tr><td>T-104</td><td>KH-00341</td><td>Cleaning not completed</td><td>5 Nov</td><td><span class="badge badge-info">New</span></td><td><a href="#complaints" class="btn btn-outline btn-sm">Open</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="categories">
+        <h2>Add a Service Category</h2>
+        <form class="form-card" action="admin-dashboard.html" method="post">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cat-en">Category name (English)</label>
+              <input type="text" id="cat-en" name="name-en" required>
+            </div>
+            <div class="form-group">
+              <label for="cat-ar">Category name (Arabic)</label>
+              <input type="text" id="cat-ar" name="name-ar" dir="rtl" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cat-desc">Short description</label>
+            <textarea id="cat-desc" name="description"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Add Category</button>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Khidmati خدمتي</h3>
+        <p>A home services booking platform for Kuwait. Verified providers, clear prices and easy booking.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="providers.html">Providers</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact &amp; Help</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Account</h3>
+        <ul>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Sign Up</a></li>
+          <li><a href="become-provider.html">Become a Provider</a></li>
+          <li><a href="booking.html">Book a Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Dashboards</h3>
+        <ul>
+          <li><a href="customer-dashboard.html">Customer</a></li>
+          <li><a href="provider-dashboard.html">Provider</a></li>
+          <li><a href="admin-dashboard.html">Admin</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">&copy; 2026 Khidmati. Course project, HTML &amp; CSS stage.</div>
+    </div>
+  </footer>
+
+</body>
+</html>

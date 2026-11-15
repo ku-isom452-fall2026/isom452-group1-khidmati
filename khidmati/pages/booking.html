@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book a home service in Kuwait: choose a service, date, time, address and payment method.">
+  <title>Book a Service | Khidmati</title>
+  <link rel="icon" type="image/png" href="../images/logo.png">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="../index.html" class="brand">
+        <img src="../images/logo.png" alt="Khidmati خدمتي">
+        
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu"><span></span></label>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="providers.html">Providers</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html" class="btn btn-outline">Login</a></li>
+          <li><a href="register.html" class="btn btn-primary">Sign Up</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="breadcrumb"><a href="../index.html">Home</a> / Booking</p>
+        <h1>Book a Service</h1>
+        <p>Tell us what you need and when. The provider will confirm your request.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <form class="form-card form-wide" action="confirmation.html" method="get">
+
+          <fieldset>
+            <legend>1. Service details</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="service">Service</label>
+                <select id="service" name="service" required>
+                  <option value="">Select a service</option>
+                  <option selected>AC Repair &amp; Maintenance</option>
+                  <option>Home Cleaning</option>
+                  <option>Plumbing</option>
+                  <option>Electrical</option>
+                  <option>Moving &amp; Packing</option>
+                  <option>Painting</option>
+                  <option>Pest Control</option>
+                  <option>Handyman</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="provider">Provider</label>
+                <select id="provider" name="provider" required>
+                  <option value="">Select a provider</option>
+                  <option selected>Abdullah Al-Mutairi (★ 4.9)</option>
+                  <option>Fresh Home Cleaning (★ 4.8)</option>
+                  <option>Rashid Plumbing (★ 4.7)</option>
+                  <option>Bright Electric (★ 4.6)</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="details">Describe the problem</label>
+              <textarea id="details" name="details" placeholder="For example: the AC in the living room is not cooling."></textarea>
+            </div>
+            <label class="choice">
+              <input type="checkbox" name="emergency" value="yes">
+              This is an emergency (I need help as soon as possible)
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>2. Date and time</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="date">Preferred date</label>
+                <input type="date" id="date" name="date" required>
+              </div>
+              <div class="form-group">
+                <label for="time">Time slot</label>
+                <select id="time" name="time" required>
+                  <option value="">Select a time</option>
+                  <option>8:00 AM - 10:00 AM</option>
+                  <option>10:00 AM - 12:00 PM</option>
+                  <option>12:00 PM - 2:00 PM</option>
+                  <option>2:00 PM - 4:00 PM</option>
+                  <option>4:00 PM - 6:00 PM</option>
+                  <option>6:00 PM - 8:00 PM</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>3. Address</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="area">Area</label>
+                <select id="area" name="area" required>
+                  <option value="">Select an area</option>
+                  <option>Kuwait City</option>
+                  <option selected>Hawalli</option>
+                  <option>Salmiya</option>
+                  <option>Farwaniya</option>
+                  <option>Jahra</option>
+                  <option>Ahmadi</option>
+                  <option>Mubarak Al-Kabeer</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="block">Block</label>
+                <input type="text" id="block" name="block" placeholder="e.g. Block 5" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="street">Street</label>
+                <input type="text" id="street" name="street" required>
+              </div>
+              <div class="form-group">
+                <label for="building">Building / House No.</label>
+                <input type="text" id="building" name="building" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="floor">Floor / Apartment (optional)</label>
+                <input type="text" id="floor" name="floor">
+              </div>
+              <div class="form-group">
+                <label for="phone">Contact phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="+965 5XXX XXXX" required>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>4. Payment method</legend>
+            <div class="choice-group">
+              <label class="choice"><input type="radio" name="payment" value="knet" checked> K-Net</label>
+              <label class="choice"><input type="radio" name="payment" value="cash"> Cash after the job</label>
+            </div>
+            <p class="form-hint">Payment is only taken after the provider accepts your request.</p>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Confirm Booking</button>
+            <a href="providers.html" class="btn btn-outline">Cancel</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Khidmati خدمتي</h3>
+        <p>A home services booking platform for Kuwait. Verified providers, clear prices and easy booking.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="providers.html">Providers</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact &amp; Help</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Account</h3>
+        <ul>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Sign Up</a></li>
+          <li><a href="become-provider.html">Become a Provider</a></li>
+          <li><a href="booking.html">Book a Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Dashboards</h3>
+        <ul>
+          <li><a href="customer-dashboard.html">Customer</a></li>
+          <li><a href="provider-dashboard.html">Provider</a></li>
+          <li><a href="admin-dashboard.html">Admin</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">&copy; 2026 Khidmati. Course project, HTML &amp; CSS stage.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
