@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Booking Details | Khidmati</title>
+  <title>Booking Confirmation | Khidmati</title>
   <link rel="icon" type="image/png" href="../images/logo.png">
   <link rel="stylesheet" href="../styles.css">
 </head>
@@ -30,25 +30,24 @@
   <main>
     <section class="page-hero">
       <div class="container">
-        <p class="breadcrumb"><a href="../index.html">Home</a> / Booking Details</p>
-        <h1>Booking Details</h1>
-        <p id="booking-message" aria-live="polite">Loading booking details...</p>
+        <p class="breadcrumb"><a href="../index.html">Home</a> / Booking Confirmation</p>
+        <h1>Booking Confirmation</h1>
+        <p>Sample confirmation page</p>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="card" id="booking-summary" hidden>
-          <h2>Booking summary</h2>
-          <p><strong>Booking:</strong> <span id="booking-id"></span></p>
-          <p><strong>Service:</strong> <span id="booking-service"></span></p>
-          <p><strong>Provider:</strong> <span id="booking-provider"></span></p>
-          <p><strong>Date and time:</strong> <span id="booking-date"></span></p>
-          <p><strong>Area:</strong> <span id="booking-area"></span></p>
-          <p><strong>Status:</strong> <span id="booking-status" class="badge"></span></p>
-          <a href="customer-dashboard.html" class="btn btn-outline">Back to dashboard</a>
+        <div class="card">
+          <h2>Sample booking summary</h2>
+          <p><strong>Booking ID:</strong> KH-00418</p>
+          <p><strong>Service:</strong> AC Repair</p>
+          <p><strong>Provider:</strong> Abdullah Al-Mutairi</p>
+          <p><strong>Date and time:</strong> 16 Nov, 10:00 AM</p>
+          <p><strong>Area:</strong> Hawalli</p>
+          <p><strong>Status:</strong> <span class="badge badge-warning">Requested</span></p>
+         
         </div>
-        <p id="booking-not-found" class="muted" role="status" hidden></p>
       </div>
     </section>
   </main>
@@ -59,62 +58,5 @@
     </div>
   </footer>
 
-  <script>
-    const savedBookings = {
-      "KH-00418": {
-        service: "AC Repair",
-        provider: "Abdullah Al-Mutairi",
-        date: "16 Nov, 10:00 AM",
-        area: "Hawalli",
-        status: "Requested",
-        badgeClass: "badge-warning"
-      },
-      "KH-00402": {
-        service: "Home Cleaning",
-        provider: "Fresh Home Cleaning",
-        date: "18 Nov, 2:00 PM",
-        area: "Salmiya",
-        status: "Accepted",
-        badgeClass: "badge-success"
-      }
-    };
-    const params = new URLSearchParams(window.location.search);
-    const bookingId = params.get("booking");
-    const formBooking = !bookingId && params.has("service")
-      ? {
-          id: "Request submitted",
-          service: params.get("service"),
-          provider: params.get("provider"),
-          date: `${params.get("date") || ""} ${params.get("time") || ""}`.trim(),
-          area: params.get("area"),
-          status: "Requested",
-          badgeClass: "badge-warning"
-        }
-      : null;
-    const booking = bookingId ? savedBookings[bookingId] : formBooking;
-    const summary = document.querySelector("#booking-summary");
-    const notFound = document.querySelector("#booking-not-found");
-
-    if (booking) {
-      document.querySelector("#booking-message").textContent = bookingId
-        ? `Details for ${bookingId}.`
-        : "Your booking request has been received.";
-      document.querySelector("#booking-id").textContent = bookingId || booking.id;
-      document.querySelector("#booking-service").textContent = booking.service || "Not provided";
-      document.querySelector("#booking-provider").textContent = booking.provider || "Not provided";
-      document.querySelector("#booking-date").textContent = booking.date || "Not provided";
-      document.querySelector("#booking-area").textContent = booking.area || "Not provided";
-      const status = document.querySelector("#booking-status");
-      status.textContent = booking.status;
-      status.classList.add(booking.badgeClass);
-      summary.hidden = false;
-    } else {
-      document.querySelector("#booking-message").textContent = "We couldn't load this booking.";
-      notFound.textContent = bookingId
-        ? `Booking ${bookingId} was not found.`
-        : "Open a booking from your dashboard or submit a booking request to see its details.";
-      notFound.hidden = false;
-    }
-  </script>
 </body>
 </html>

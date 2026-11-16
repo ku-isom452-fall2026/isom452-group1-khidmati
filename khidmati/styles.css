@@ -279,10 +279,6 @@ table.data td:first-child {
   color: var(--white);
 }
 
-/* Login, Sign Up and the language switch sit together on the far right.
-   The first item of that group gets margin-left: auto, which pushes the
-   whole group to the end. `order` keeps them in this sequence even if the
-   HTML lists them differently. Works with or without the .nav-auth-start class. */
 .main-nav .nav-auth-start,
 .main-nav ul:not(:has(.nav-auth-start)) > li:has(> a[href*="login"]) {
   margin-left: auto;
