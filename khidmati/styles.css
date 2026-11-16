@@ -17,6 +17,7 @@
   --radius: 12px;
   --shadow: 0 4px 14px rgba(15, 76, 92, 0.1);
   --font: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --base-font-size: 18px;
 }
 
 *,
@@ -28,13 +29,44 @@
 body {
   margin: 0;
   font-family: var(--font);
+  font-size: var(--base-font-size);
   color: var(--text);
   line-height: 1.6;
   background: var(--white);
 }
 
+@keyframes fadeUpIn {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .providers-page {
   font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+.mission-section {
+  overflow: hidden;
+}
+
+.mission-copy,
+.mission-image {
+  opacity: 0;
+  transform: translateY(28px);
+  animation: fadeUpIn 0.8s ease forwards;
+}
+
+.mission-copy {
+  animation-delay: 0.15s;
+}
+
+.mission-image {
+  animation-delay: 0.35s;
 }
 
 img {
@@ -44,6 +76,7 @@ img {
 
 a {
   color: var(--primary);
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
 h1,
