@@ -39,7 +39,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # '.' uploads everything in your root repository folder
-          path: '.'
+          path: './khidmati'
 
       - name: Deploy to GitHub Pages
         id: deployment
